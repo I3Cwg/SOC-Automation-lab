@@ -1,10 +1,23 @@
 # SOC automation LAB
 ## 1. Introduction
 ### 1.1 Overview
-Dự án Tự động hóa SOC nhằm mục đích tạo ra một quy trình làm việc Trung tâm điều hành bảo mật (SOC) tự động hợp lý hóa việc giám sát sự kiện, cảnh báo và phản hồi sự cố. Bằng cách tận dụng các công cụ nguồn mở mạnh mẽ như Wazuh, Shuffle và TheHive, dự án này nâng cao hiệu quả và hiệu suất của các hoạt động SOC. Dự án bao gồm việc thiết lập một máy khách Windows 10 với Sysmon để tạo sự kiện chi tiết, Wazuh để quản lý và cảnh báo sự kiện toàn diện, Shuffle để tự động hóa quy trình làm việc và TheHive để quản lý trường hợp và các hành động phản hồi được phối hợp.
+SOC Automation Lab là một dự án tập trung vào tự động hóa Security Operations Center (SOC) bằng cách sử dụng các công cụ mã nguồn mở như Wazuh, Shuffle, và TheHive. Mục tiêu chính là giảm bớt gánh nặng cho các SOC analyst, cải thiện tốc độ phản hồi sự cố và tối ưu hóa quy trình giám sát bảo mật.
+Các thành phần chính:
+
+  - Windows 10 + Sysmon → Tạo log bảo mật và sự kiện.
+  - Wazuh → Thu thập, phân tích, và cảnh báo sự kiện bảo mật.
+  - Shuffle → Tự động hóa quy trình xử lý cảnh báo bảo mật.
+  - TheHive → Quản lý sự cố và phối hợp phản hồi bảo mật.
+  - VirusTotal → Kiểm tra file và URL nghi ngờ có chứa mã độc.
+![alt text](assets/image-100.png)
 
 ## 2. Requirements
+Các công cụ cần cài đặt:
 
+- VMware Workstation/Fusion → Tạo máy ảo.
+- Windows 10 → Máy tạo log & mô phỏng hoạt động của user.
+- Ubuntu 22.04 → Hệ điều hành để chạy Wazuh & TheHive.
+- Sysmon → Thu thập log hệ thống chi tiết trên Windows.
 ## 3. Installation
 ### 3.1 Cấu hình win 10 với sysmon
 #### 3.1.1 Cài đặt Sysmon
